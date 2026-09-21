@@ -1,42 +1,132 @@
 <!DOCTYPE html>
-<!--
-  KERANGKA AWAL — Halaman Profil Saya
-  PABW 2026/2027 · Pertemuan 3
-
-  Cara pakai:
-  1. Salin berkas ini, ganti nama menjadi profil.html
-  2. Ganti setiap tulisan TODO dengan isi milik Anda SENDIRI
-  3. Simpan, lalu buka di peramban (F5 untuk memuat ulang)
-  4. Kerjakan berurutan mengikuti Lembar B, C, D, dan E pada worksheet
-
-  Jangan menghapus komentar TODO sebelum bagian itu Anda kerjakan —
-  komentar itu adalah daftar periksa Anda sendiri.
--->
-<html>
+<html lang="id">
 <head>
-  <title>TODO: tulis judul halaman Anda di sini</title>
-  <!-- TODO B.1: tambahkan dua baris meta di bawah ini:
-       <meta charset="...">
-       <meta name="viewport" content="...">  -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Film Favorite</title>
 </head>
+
 <body>
 
-  <!-- TODO C.1: buat <header> di sini.
-       Isinya: satu <h1> berisi judul halaman Anda.
-       Di dalamnya juga ada <nav> berisi 3 tautan ke bagian halaman. -->
+    <header>
+        <h1>Series Film Favorite</h1>
 
-  <!-- TODO C.2: buat <main> di sini sebagai pembungkus semua bagian isi.
-       Di dalamnya ada 2 <section>, masing-masing punya <h2> sendiri. -->
+        <nav aria-label="Navigasi utama">
+            <ul>
+                <li><a href="#daftar-series">Daftar Series</a></li>
+                <li><a href="#tambah-series">Tambah Series</a></li>
+                <li><a href="#tentang-saya">Tentang Saya</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- TODO D.1: di dalam section pertama, buat tabel data Anda.
-         Wajib ada: <caption>, <thead>, <th scope="col">, dan minimal 3 baris data. -->
+    <main>
 
-    <!-- TODO E.1: di dalam section kedua, buat form Anda.
-         Wajib ada: minimal 3 kolom, setiap kolom punya <label for> yang
-         cocok dengan id input-nya, dan satu atribut validasi. -->
+        <section id="daftar-series">
+            <h2>Daftar Series Favorit</h2>
 
-  <!-- TODO C.3: buat <footer> di sini.
-       Isinya: nama Anda, NIM Anda, dan tahun. -->
+            <p>
+                Berikut adalah beberapa series film favorit saya
+                beserta genre, tahun rilis, dan rating pribadi.
+            </p>
+
+            <table>
+                <caption>Daftar Series Film Favorit</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Judul Series</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Tahun Rilis</th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">Stranger Things</th>
+                        <td>Sci-Fi, Drama</td>
+                        <td>2016</td>
+                        <td>9.0</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Wednesday</th>
+                        <td>Mystery, Comedy</td>
+                        <td>2022</td>
+                        <td>8.5</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">The Witcher</th>
+                        <td>Fantasy, Action</td>
+                        <td>2019</td>
+                        <td>8.0</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <section id="tambah-series">
+            <h2>Tambah Series Favorit</h2>
+
+            <form action="/simpan" method="post">
+
+                <p>
+                    <label for="judul-series">Judul Series</label>
+                    <input
+                        type="text"
+                        id="judul-series"
+                        name="judul-series"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="genre">Genre</label>
+                    <input
+                        type="text"
+                        id="genre"
+                        name="genre"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="rating">Rating</label>
+                    <input
+                        type="number"
+                        id="rating"
+                        name="rating"
+                        min="0"
+                        max="10"
+                        step="0.1"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Simpan</button>
+
+            </form>
+        </section>
+
+        <section id="tentang-saya">
+            <h2>Tentang Saya</h2>
+
+            <p>Nama: Muhammad Dzaky Putra Wando</p>
+            <p>NIM: 25523232</p>
+            <p>
+                Halaman ini dibuat untuk tugas Pengembangan
+                Aplikasi Berbasis Web Pertemuan 3.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Muhammad Dzaky Putra Wando - NIM 25523232</p>
+    </footer>
 
 </body>
 </html>
