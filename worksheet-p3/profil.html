@@ -14,6 +14,18 @@
         <nav aria-label="Navigasi utama">
             <ul>
                 <li><a href="#daftar-series">Daftar Series</a></li>
+                <figure>
+    <img
+        src="koleksi-series-1.png"
+        alt="Koleksi poster series film favorit seperti Stranger Things, Wednesday, dan The Witcher"
+        width="640"
+        height="360"
+        loading="lazy"
+    >
+    <figcaption>
+        Koleksi series film favorit saya.
+    </figcaption>
+</figure>
                 <li><a href="#tambah-series">Tambah Series</a></li>
                 <li><a href="#tentang-saya">Tentang Saya</a></li>
             </ul>
@@ -22,93 +34,46 @@
 
     <main>
 
-        <section id="daftar-series">
-            <h2>Daftar Series Favorit</h2>
+        <table>
+    <caption>Daftar Series Film Favorit</caption>
 
-            <p>
-                Berikut adalah beberapa series film favorit saya
-                beserta genre, tahun rilis, dan rating pribadi.
-            </p>
+    <thead>
+        <tr>
+            <th scope="col">Judul Series</th>
+            <th scope="col">Genre</th>
+            <th scope="col">Tahun Rilis</th>
+            <th scope="col">Rating</th>
+        </tr>
+    </thead>
 
-            <table>
-                <caption>Daftar Series Film Favorit</caption>
+    <tbody>
+        <tr>
+            <th scope="row">Stranger Things</th>
+            <td>Sci-Fi, Drama</td>
+            <td>2016</td>
+            <td>9.0</td>
+        </tr>
 
-                <thead>
-                    <tr>
-                        <th scope="col">Judul Series</th>
-                        <th scope="col">Genre</th>
-                        <th scope="col">Tahun Rilis</th>
-                        <th scope="col">Rating</th>
-                    </tr>
-                </thead>
+        <tr>
+            <th scope="row">Wednesday</th>
+            <td>Mystery, Comedy</td>
+            <td>2022</td>
+            <td>8.5</td>
+        </tr>
 
-                <tbody>
-                    <tr>
-                        <th scope="row">Stranger Things</th>
-                        <td>Sci-Fi, Drama</td>
-                        <td>2016</td>
-                        <td>9.0</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">Wednesday</th>
-                        <td>Mystery, Comedy</td>
-                        <td>2022</td>
-                        <td>8.5</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row">The Witcher</th>
-                        <td>Fantasy, Action</td>
-                        <td>2019</td>
-                        <td>8.0</td>
-                    </tr>
-                </tbody>
-            </table>
-
-        </section>
+        <tr>
+            <th scope="row">The Witcher</th>
+            <td>Fantasy, Action</td>
+            <td>2019</td>
+            <td>8.0</td>
+        </tr>
+    </tbody>
+</table>
 
         <section id="tambah-series">
             <h2>Tambah Series Favorit</h2>
 
-            <form action="/simpan" method="post">
-
-                <p>
-                    <label for="judul-series">Judul Series</label>
-                    <input
-                        type="text"
-                        id="judul-series"
-                        name="judul-series"
-                        required
-                    >
-                </p>
-
-                <p>
-                    <label for="genre">Genre</label>
-                    <input
-                        type="text"
-                        id="genre"
-                        name="genre"
-                        required
-                    >
-                </p>
-
-                <p>
-                    <label for="rating">Rating</label>
-                    <input
-                        type="number"
-                        id="rating"
-                        name="rating"
-                        min="0"
-                        max="10"
-                        step="0.1"
-                        required
-                    >
-                </p>
-
-                <button type="submit">Simpan</button>
-
-            </form>
+            <!-- form akan diletakkan di sini -->
         </section>
 
         <section id="tentang-saya">
@@ -116,16 +81,12 @@
 
             <p>Nama: Muhammad Dzaky Putra Wando</p>
             <p>NIM: 25523232</p>
-            <p>
-                Halaman ini dibuat untuk tugas Pengembangan
-                Aplikasi Berbasis Web Pertemuan 3.
-            </p>
         </section>
 
     </main>
 
     <footer>
-        <p>Muhammad Dzaky Putra Wando - NIM 25523232</p>
+        <p>Muhammad Dzaky Putra Wando - NIM 25523232 - 2026</p>
     </footer>
 
 </body>
