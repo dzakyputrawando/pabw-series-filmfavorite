@@ -1,0 +1,43 @@
+
+/* dasar: berlaku di semua lebar */
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+/* Tablet: galeri menjadi dua kolom */
+@media (min-width: 48rem) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: sidebar bersanding dengan konten */
+@media (min-width: 60rem) {
+    .content {
+        grid-template-columns: 16rem 1fr;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
