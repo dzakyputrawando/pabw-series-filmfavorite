@@ -1,0 +1,57 @@
+
+/* Dasar: tampilan layar sempit */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+/* Mencegah isi melebar karena teks panjang */
+.isi,
+.sisi,
+.utama {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+/* Tablet: galeri dua kolom jika tersedia */
+@media (min-width: 48rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Desktop: sidebar dan konten berdampingan */
+@media (min-width: 60rem) {
+  .isi {
+    grid-template-columns: 16rem minmax(0, 1fr);
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Gambar menyesuaikan wadah */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tabel tidak memaksa seluruh halaman melebar */
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Teks mudah dibaca */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}

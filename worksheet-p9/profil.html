@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series Film Favorite</title>
+
+    <link rel="stylesheet" href="tokens.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="komponen.css">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="responsif.css">
+</head>
+
+<body>
+    <div class="page">
+        <header>
+            <div class="header-baris">
+                <div>
+                    <h1>Series Film Favorite</h1>
+                </div>
+
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#profil">Profil</a></li>
+                        <li><a href="#koleksi">Koleksi</a></li>
+                        <li><a href="#kontak">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <input
+                type="checkbox"
+                id="tema"
+                class="pengalih-tema"
+            >
+            <label for="tema" class="tombol-tema">
+                Tema gelap
+            </label>
+        </header>
+
+        <main class="isi">
+            <aside class="sisi">
+                <section id="profil">
+                    <h2>Tentang Saya</h2>
+                    <p>Nama: Muhammad Dzaky Putra Wando</p>
+                    <p>NIM: 25523232</p>
+                    <p>Program Studi: Informatika</p>
+                </section>
+            </aside>
+
+            <div class="utama">
+                <section id="koleksi">
+                    <h2>Koleksi Series Favorit</h2>
+
+                    <img
+                        src="koleksi-series-1.png"
+                        alt="Koleksi series favorit"
+                        class="gambar-koleksi"
+                    >
+
+                    <div
+                        id="filter"
+                        aria-label="Filter kategori series"
+                    >
+                        <button
+                            type="button"
+                            data-kategori="semua"
+                            class="aktif"
+                        >
+                            Semua
+                        </button>
+
+                        <button
+                            type="button"
+                            data-kategori="Sci-Fi"
+                        >
+                            Sci-Fi
+                        </button>
+
+                        <button
+                            type="button"
+                            data-kategori="Mystery"
+                        >
+                            Mystery
+                        </button>
+
+                        <button
+                            type="button"
+                            data-kategori="Fantasy"
+                        >
+                            Fantasy
+                        </button>
+                    </div>
+
+                    <p id="pesan-kosong" hidden>
+                        Belum ada series untuk ditampilkan.
+                    </p>
+
+                    <div
+                        id="daftar"
+                        class="daftar-series"
+                    ></div>
+                </section>
+
+                <section id="tambah-series">
+                    <h2>Tambah Series Favorit</h2>
+
+                    <form id="form-series">
+                        <p>
+                            <label for="judul-series">
+                                Judul Series
+                            </label>
+
+                            <input
+                                type="text"
+                                id="judul-series"
+                                name="judul-series"
+                                required
+                            >
+
+                            <small id="pesan-judul"></small>
+                        </p>
+
+                        <p>
+                            <label for="genre">Genre</label>
+
+                            <input
+                                type="text"
+                                id="genre"
+                                name="genre"
+                                required
+                            >
+
+                            <small id="pesan-genre"></small>
+                        </p>
+
+                        <p>
+                            <label for="rating">
+                                Rating (0–10)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="rating"
+                                name="rating"
+                                min="0"
+                                max="10"
+                                step="0.1"
+                                required
+                            >
+
+                            <small id="pesan-rating"></small>
+                        </p>
+
+                        <button type="submit">
+                            Simpan Series
+                        </button>
+                    </form>
+                </section>
+            </div>
+        </main>
+
+        <footer id="kontak">
+            <p>
+                Muhammad Dzaky Putra Wando -
+                NIM 25523232 - 2026
+            </p>
+        </footer>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/dom.js"></script>
+</body>
+</html>
