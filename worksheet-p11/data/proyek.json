@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "judul": "Stranger Things",
+    "tahun": 2016,
+    "kategori": "Sci-Fi"
+  },
+  {
+    "id": 2,
+    "judul": "Wednesday",
+    "tahun": 2022,
+    "kategori": "Mystery"
+  },
+  {
+    "id": 3,
+    "judul": "The Witcher",
+    "tahun": 2019,
+    "kategori": "Fantasy"
+  }
+]
