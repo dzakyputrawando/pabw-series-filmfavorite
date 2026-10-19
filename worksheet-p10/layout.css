@@ -1,3 +1,12 @@
+
+/* Kerangka utama halaman */
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+/* Header */
 header {
   padding-block: var(--space-4);
   border-bottom: 1px solid var(--color-border);
@@ -11,11 +20,20 @@ header {
   flex-wrap: wrap;
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-4);
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -27,32 +45,40 @@ nav a:hover {
   text-decoration: underline;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  gap: var(--section-gap);
+/* Isi halaman: sidebar dan konten */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  gap: var(--space-6);
   padding-block: var(--space-6);
+  min-width: 0;
 }
 
-.katalog {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
+.sisi,
+.utama {
+  min-width: 0;
 }
 
-.kartu {
-  flex: 1 1 16rem;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-1);
-  padding: var(--card-pad);
-}
-
+/* Kaki halaman */
 footer {
-  margin-top: var(--space-6);
   padding-block: var(--space-4);
   border-top: 1px solid var(--color-border);
   color: var(--color-fg);
   font-size: var(--text-sm);
+}
+/* Layout responsif untuk layar kecil */
+@media (max-width: 768px) {
+ /* Isi halaman: sidebar dan konten */
+.isi {
+  display: grid;
+  grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+  gap: var(--space-6);
+  padding-block: var(--space-6);
+  min-width: 0;
+}
+
+.sisi,
+.utama {
+  min-width: 0;
+}
 }

@@ -68,9 +68,94 @@ input:user-invalid {
   color: var(--color-surface);
   cursor: pointer;
 }
-#filter button.aktif {
-    background-color: #1d3a8c;
-    color: #ffffff;
-    outline: 2px solid #1d3a8c;
-    outline-offset: 2px;
+
+
+/* Tabel koleksi series */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-block: var(--space-4);
 }
+
+caption {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: var(--space-2);
+  text-align: left;
+}
+
+th,
+td {
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+thead th {
+  background: var(--color-primary);
+  color: var(--color-surface);
+}
+
+/* Form tambah series */
+#tambah-series form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+#tambah-series form p {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+#tambah-series button {
+  align-self: flex-start;
+}
+
+/* Galeri adaptif */
+.galeri {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: var(--space-4);
+}
+
+/* Kartu series */
+.kartu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-fg);
+}
+
+/* Isi kartu yang panjang */
+.kartu__isi {
+  min-width: 0;
+}
+
+.kartu__judul {
+  overflow-wrap: anywhere;
+}
+
+/* Bagian bawah kartu */
+.kartu__kaki {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-top: auto;
+}
+
+/* Kartu dengan tinggi minimum */
+.galeri .kartu {
+  min-height: 14rem;
+  align-content: start;
+}
+
+
